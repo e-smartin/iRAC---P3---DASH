@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8"/>
+<title>Introducción a DASH</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/3.2.2/dash.all.min.js" integrity="sha512-vYbnErl9JO63c2v/ADkEKrYfQChzm4v7nU+55A5EvO7P+AYm9bmdtZhBA6Fg8FkfqEvXJLd/k9L26d1HS1eOtg==" crossorigin="anonymous"></script>
+</head>
+
+  <body>
+	  <h1> Equipo 25 </h1>
+    <div>
+		<video class="dashjs-player" autoplay controls preload="auto">
+			<source src="https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd" type="application/dash+xml"/>
+		</video>
+    </div>
+	<script>
+		var player;
+		document.addEventListener("DOMContentLoaded", function () {
+		 init();
+		});
+		function init(){
+		 player = dashjs.MediaPlayerFactory.create( document.querySelector(".dashjsplayer"));
+		};
+	</script>
+  </body>
+</html>
