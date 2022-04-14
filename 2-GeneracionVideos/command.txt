@@ -1,0 +1,22 @@
+#1
+x264 --output low_conf.264 --fps 24 --preset slow --bitrate 100 --vbv-maxrate 4800 --vbv-bufsize 9600 --min-keyint 48 --keyint 48 --scenecut 0 --no-scenecut --pass 1 --video-filter "resize:width=160,height=90" jobs.mp4
+
+#2
+
+x264 --output medium_conf.264 --fps 24 --preset slow --bitrate 600 --vbv-maxrate 4800 --vbv-bufsize 9600 --min-keyint 48 --keyint 48 --scenecut 0 --no-scenecut --pass 1 --video-filter "resize:width=640,height=360" jobs.mp4 
+
+#3
+
+x264 --output high_conf.264 --fps 24 --preset slow --bitrate 2400 --vbv-maxrate 4800 --vbv-bufsize 9600 --min-keyint 48 --keyint 48 --scenecut 0 --no-scenecut --pass 1 --video-filter "resize:width=1280,height=720" jobs.mp4
+
+
+
+#### second part
+
+MP4Box -add low_conf.264 -fps 24 low.mp4
+
+MP4Box -add medium_conf.264 -fps 24 medium.mp4
+
+MP4Box -add high_conf.264 -fps 24 high.mp4
+
+
