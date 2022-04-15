@@ -1,0 +1,24 @@
+
+en todos ponía: 
+found regular I-frame interval: 48 frames (at 24.000 frames per second)
+
+
+
+
+  Bento4/cmakebuild/mp4fragment iRAC---P3---DASH/2.1GeneracionVideos/low.mp4 iRAC---P3---DASH/2.2VideosBento/low_fragmented.mp4
+
+  Bento4/cmakebuild/mp4fragment iRAC---P3---DASH/2.1GeneracionVideos/medium.mp4 iRAC---P3---DASH/2.2VideosBento/medium_fragmented.mp4
+
+  Bento4/cmakebuild/mp4fragment iRAC---P3---DASH/2.1GeneracionVideos/high.mp4 iRAC---P3---DASH/2.2VideosBento/high_fragmented.mp4
+-
+
+
+
+Tras mover los ficheros, hacemos:
+
+dentro del path: /Bento4/Source/Python
+
+el comando:
+
+	utils/mp4-dash.py ~/Desktop/iRAC---P3---DASH/2.2VideosBento/low_fragmented.mp4 ~/Desktop/iRAC---P3---DASH/2.2VideosBento/medium_fragmented.mp4 ~/Desktop/iRAC---P3---DASH/2.2VideosBento/high_fragmented.mp4 -o ~/Desktop/iRAC---P3---DASH/2.2VideosBento/mpdfiles
+
