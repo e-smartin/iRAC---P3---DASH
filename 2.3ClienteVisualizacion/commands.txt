@@ -1,0 +1,60 @@
+
+en todos ponía: 
+found regular I-frame interval: 48 frames (at 24.000 frames per second)
+
+
+
+
+  Bento4/cmakebuild/mp4fragment iRAC---P3---DASH/2.1GeneracionVideos/low.mp4 iRAC---P3---DASH/2.2VideosBento/low_fragmented.mp4
+
+  Bento4/cmakebuild/mp4fragment iRAC---P3---DASH/2.1GeneracionVideos/medium.mp4 iRAC---P3---DASH/2.2VideosBento/medium_fragmented.mp4
+
+  Bento4/cmakebuild/mp4fragment iRAC---P3---DASH/2.1GeneracionVideos/high.mp4 iRAC---P3---DASH/2.2VideosBento/high_fragmented.mp4
+-
+
+
+
+Tras mover los ficheros, hacemos:
+
+dentro del path: /Bento4/Source/Python
+
+el comando:
+
+	utils/mp4-dash.py ~/Desktop/iRAC---P3---DASH/2.2VideosBento/low_fragmented.mp4 ~/Desktop/iRAC---P3---DASH/2.2VideosBento/medium_fragmented.mp4 ~/Desktop/iRAC---P3---DASH/2.2VideosBento/high_fragmented.mp4 -o ~/Desktop/iRAC---P3---DASH/2.2VideosBento/mpdfiles
+
+
+
+##########################################
+#		haciendo pruebas:	#
+############################################
+
+la calidad cambia (teniendo más cuanto mejor es la conexión a internet.
+
+Si saltamos a otro punto del video el buffer se pone a 0 y pide los siguientes 6 segmentos de la máxima calidad que puede ofrecer
+[6:39]. Dejamos el video parado y vemos que el buffer permanece quieto (ni se llena ni se descarga). Cuando volvemos a reproducir el video y detenerlo, se hace una petición GET  del siguiente segmento (asumiendo que no se van a hacer saltos y al pararlo de nuevo, no se realizan más peticiones.
+
+127.0.0.1 - - [12/May/2022 06:39:24] "GET /output/video/avc1/3/seg-197.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 06:39:24] "GET /output/video/avc1/3/seg-198.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 06:39:24] "GET /output/video/avc1/3/seg-199.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 06:39:24] "GET /output/video/avc1/3/seg-200.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 06:39:24] "GET /output/video/avc1/3/seg-201.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 06:39:24] "GET /output/video/avc1/3/seg-202.m4s HTTP/1.1" 200 -
+
+
+
+****hablando del fichero aaaa.txt
+
+Paramos en 7:21, volvemos a reproducir en 7:22. Notamos que aumenta calidad.
+
+
+Nos movemos a otro instante en 7:24, vemos como pierde calidad y vuelve a ganarla.
+
+
+
+Conectamos a BAF y vem volvemos a reproducir, lleva a avc1/3
+
+
+Saltamos a otro instante temporal en 7:27.
+
+
+Volvemos a compartir internet con el movil y recargamos la página, vemos que la calidad es directamente 3. Creemos que esto se debe a que lo almacena en caché

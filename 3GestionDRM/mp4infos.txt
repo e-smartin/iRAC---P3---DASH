@@ -1,0 +1,136 @@
+esmartin@ubuntu2:~/Desktop$ Bento4/cmakebuild/mp4info iRAC---P3---DASH/2.2VideosBento/medium_fragmented.mp4 
+File:
+  major brand:      isom
+  minor version:    1
+  compatible brand: isom
+  compatible brand: avc1
+  compatible brand: iso5
+  fast start:       yes
+
+Movie:
+  duration:   449833 (media timescale units)
+  duration:   449833 (ms)
+  time scale: 1000
+  fragments:  yes
+
+Found 1 Tracks
+Track 1:
+  flags:        7 ENABLED IN-MOVIE IN-PREVIEW
+  id:           1
+  type:         Video
+  duration: 449833 ms
+  language: und
+  media:
+    sample count: 0
+    timescale:    24
+    duration:     0 (media timescale units)
+    duration:     0 (ms)
+    bitrate (computed): 619.705 Kbps
+    sample count with fragments: 10796
+    duration with fragments:     10796
+    duration with fragments:     449833 (ms)
+  display width:  639.000000
+  display height: 360.000000
+  Sample Description 0
+    Coding:       avc1 (H.264)
+    Codec String: avc1.4D401E
+    AVC Profile:          77 (Main)
+    AVC Profile Compat:   40
+    AVC Level:            30
+    AVC NALU Length Size: 4
+    AVC SPS: [674d401eeca05017fcbff813f81400800000030080000018478b16cb]
+    AVC PPS: [68efbc80]
+    Width:       640
+    Height:      360
+    Depth:       24
+esmartin@ubuntu2:~/Desktop$ Bento4/cmakebuild/mp4info iRAC---P3---DASH/2.2VideosBento/low_fragmented.mp4 
+File:
+  major brand:      isom
+  minor version:    1
+  compatible brand: isom
+  compatible brand: avc1
+  compatible brand: iso5
+  fast start:       yes
+
+Movie:
+  duration:   449833 (media timescale units)
+  duration:   449833 (ms)
+  time scale: 1000
+  fragments:  yes
+
+Found 1 Tracks
+Track 1:
+  flags:        7 ENABLED IN-MOVIE IN-PREVIEW
+  id:           1
+  type:         Video
+  duration: 449833 ms
+  language: und
+  media:
+    sample count: 0
+    timescale:    24
+    duration:     0 (media timescale units)
+    duration:     0 (ms)
+    bitrate (computed): 101.378 Kbps
+    sample count with fragments: 10796
+    duration with fragments:     10796
+    duration with fragments:     449833 (ms)
+  display width:  159.000000
+  display height: 90.000000
+  Sample Description 0
+    Coding:       avc1 (H.264)
+    Codec String: avc1.4D401E
+    AVC Profile:          77 (Main)
+    AVC Profile Compat:   40
+    AVC Level:            30
+    AVC NALU Length Size: 4
+    AVC SPS: [674d401eeca146fc9ff813f81400800000030080000018478b16cb]
+    AVC PPS: [68efbc80]
+    Width:       160
+    Height:      90
+    Depth:       24
+esmartin@ubuntu2:~/Desktop$ Bento4/cmakebuild/mp4info iRAC---P3---DASH/2.2VideosBento/high_fragmented.mp4 
+File:
+  major brand:      isom
+  minor version:    1
+  compatible brand: isom
+  compatible brand: avc1
+  compatible brand: iso5
+  fast start:       yes
+
+Movie:
+  duration:   449833 (media timescale units)
+  duration:   449833 (ms)
+  time scale: 1000
+  fragments:  yes
+
+Found 1 Tracks
+Track 1:
+  flags:        7 ENABLED IN-MOVIE IN-PREVIEW
+  id:           1
+  type:         Video
+  duration: 449833 ms
+  language: und
+  media:
+    sample count: 0
+    timescale:    24
+    duration:     0 (media timescale units)
+    duration:     0 (ms)
+    bitrate (computed): 2455.590 Kbps
+    sample count with fragments: 10796
+    duration with fragments:     10796
+    duration with fragments:     449833 (ms)
+  display width:  1278.000000
+  display height: 720.000000
+  Sample Description 0
+    Coding:       avc1 (H.264)
+    Codec String: avc1.4D401F
+    AVC Profile:          77 (Main)
+    AVC Profile Compat:   40
+    AVC Level:            31
+    AVC NALU Length Size: 4
+    AVC SPS: [674d401feca02802ddff813f8140080000030008000003018478c18cb0]
+    AVC PPS: [68efbc80]
+    Width:       1280
+    Height:      720
+    Depth:       24
+
