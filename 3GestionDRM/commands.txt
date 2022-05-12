@@ -1,0 +1,10 @@
+esmartin@ubuntu2:~/Desktop$ Bento4/cmakebuild/mp4encrypt --method MPEG-CENC --key 1:87237D20A19F58A740C05684E699B4AA:random --property 1:KID:A16E402B9056E371F36D348AA62BB749 --global-option mpeg-cenc.eme-pssh:true iRAC---P3---DASH/2.2VideosBento/low_fragmented.mp4 iRAC---P3---DASH/3GestionDRM/low_encrypted.mp4
+
+
+
+esmartin@ubuntu2:~/Desktop$ Bento4/cmakebuild/mp4encrypt --method MPEG-CENC --key 1:87237D20A19F58A740C05684E699B4AA:random --property 1:KID:A16E402B9056E371F36D348AA62BB749 --global-option mpeg-cenc.eme-pssh:true iRAC---P3---DASH/2.2VideosBento/medium_fragmented.mp4 iRAC---P3---DASH/3GestionDRM/medium_encrypted.mp4
+
+
+
+esmartin@ubuntu2:~/Desktop$ Bento4/cmakebuild/mp4encrypt --method MPEG-CENC --key 1:87237D20A19F58A740C05684E699B4AA:random --property 1:KID:A16E402B9056E371F36D348AA62BB749 --global-option mpeg-cenc.eme-pssh:true iRAC---P3---DASH/2.2VideosBento/high_fragmented.mp4 iRAC---P3---DASH/3GestionDRM/high_encrypted.mp4
+

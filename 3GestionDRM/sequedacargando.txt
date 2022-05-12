@@ -1,0 +1,24 @@
+Serving HTTP on 0.0.0.0 port 8023 (http://0.0.0.0:8023/) ...
+127.0.0.1 - - [12/May/2022 09:35:03] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:03] code 404, message File not found
+127.0.0.1 - - [12/May/2022 09:35:03] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [12/May/2022 09:35:03] "GET /output/stream.mpd HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:04] "GET /output/video/avc1/1/init.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:04] "GET /output/video/avc1/1/seg-1.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:04] "GET /output/video/avc1/1/seg-2.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:04] "GET /output/video/avc1/2/init.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:05] "GET /output/video/avc1/2/seg-3.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:05] "GET /output/video/avc1/2/seg-4.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:05] "GET /output/video/avc1/3/init.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:05] "GET /output/video/avc1/3/seg-5.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:05] "GET /output/video/avc1/3/seg-6.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:05] "GET /output/video/avc1/3/seg-7.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:05] "GET /output/video/avc1/3/seg-8.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:05] "GET /output/video/avc1/3/seg-9.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:05] "GET /output/video/avc1/3/seg-10.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:05] "GET /output/video/avc1/3/seg-11.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:05] "GET /output/video/avc1/3/seg-12.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:06] "GET /output/video/avc1/3/seg-13.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:06] "GET /output/video/avc1/3/seg-14.m4s HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2022 09:35:06] "GET /output/video/avc1/3/seg-15.m4s HTTP/1.1" 200 -
+
