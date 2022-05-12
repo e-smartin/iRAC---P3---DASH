@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8"/>
+<title>Introducción a DASH</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/3.2.2/dash.all.min.js" integrity="sha512-vYbnErl9JO63c2v/ADkEKrYfQChzm4v7nU+55A5EvO7P+AYm9bmdtZhBA6Fg8FkfqEvXJLd/k9L26d1HS1eOtg==" crossorigin="anonymous"></script>
+</head>
+
+  <body>
+
+	  <h1> Equipo 25 </h1>
+	<div class="code">
+		<video class="dashjs-player" autoplay controls preload="auto" muted>
+		</video>
+		</div>
+		<div class="code">
+			<p>Video Bitrate: <span id="bitrate"></span></p>
+			<p>Video Buffer: <span id="buffer"></span> </p>
+			<p>Video Representation: <span id="representation"></span></p>
+	</div>
+  <script>
+	document.addEventListener("DOMContentLoaded", function () {
+            init();
+        	});
+
+        function init(){
+            var video,player,mpd_url = "./output/stream.mpd";
+            
+            video = document.querySelector("video");
+	//añadimos estas lineas para este apartado
+
+		const protData = {
+		"org.w3.clearkey": {
+		"clearkeys": {
+		"oW5AK5BW43HzbTSKpiu3SQ":"hyN9IKGfWKdAwFaE5pm0qg"
+		}
+		}
+		};
+
+
+
+
+            player = dashjs.MediaPlayer().create();
+	////añadimos tambien esta
+		player.setProtectionData(protData);
+
+
+            player.initialize(video, mpd_url, true);
+            player.on(dashjs.MediaPlayer.events["PLAYBACK_ENDED"], function() {
+                clearInterval(eventPoller);
+            });
+
+            var eventPoller = setInterval(function() {
+                var streamInfo = player.getActiveStream().getStreamInfo();
+                var dashMetrics = player.getDashMetrics();
+                var dashAdapter = player.getDashAdapter();
+            
+                if (dashMetrics && streamInfo) {
+                    const periodIdx = streamInfo.index;
+                    
+                    var repSwitch = dashMetrics.getCurrentRepresentationSwitch('video', true);
+                    var bufferLevel = dashMetrics.getCurrentBufferLevel('video', true);
+                    
+                    var bitrate = repSwitch ? Math.round(dashAdapter.
+                        getBandwidthForRepresentation(repSwitch.to,
+                        periodIdx) / 1000) : NaN;
+                    
+                    document.getElementById('buffer').innerText = bufferLevel + " secs";
+                    document.getElementById('bitrate').innerText = bitrate + " Kbps";
+                    document.getElementById('representation').innerText = repSwitch.to;
+                }
+            }, 500);
+        }
+	</script></body>
+</html>
